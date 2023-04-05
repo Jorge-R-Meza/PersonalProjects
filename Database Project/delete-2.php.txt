@@ -1,0 +1,45 @@
+<?php
+
+ini_set('display_errors', 1);
+ini_set('display_startup_errors', 1);
+error_reporting(E_ALL);
+
+$username = 'jqm6388';
+$password = '@MyCMPSC431';
+$host = 'localhost';
+$dbname = 'jqm6388_431W';
+
+?>
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>PHP MySQL Query Data Demo</title>
+    </head>
+    <body>
+		<p>
+			<?php 
+				echo "Deleting Make and Model: " . $_POST["MakeModelID"] . "...";
+				$sql = 'DELETE jqm6388_cars, jqm6388_Available_Options, jqm6388_Drive_Train, jqm6388_Make_Model_Info FROM jqm6388_cars INNER JOIN jqm6388_Available_Options INNER JOIN jqm6388_Drive_Train INNER JOIN jqm6388_Make_Model_Info WHERE jqm6388_cars.MakeModelID = jqm6388_Make_Model_Info.MakeModelID and jqm6388_Make_Model_Info.MakeModelID = jqm6388_Available_Options.MakeModelID and jqm6388_Make_Model_Info.MakeModelID = jqm6388_Drive_Train.MakeModelID and jqm6388_Make_Model_Info.MakeModelID = "' . $_POST["MakeModelID"] . '"';
+              
+				try {
+					$conn = new PDO("mysql:host=$host;dbname=$dbname", $username, $password);
+					$conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+					$conn->exec($sql);
+					echo "Make and Model deleted successfully";
+				?>
+				<p>You will be redirected in 3 seconds</p>
+				<script>
+					var timer = setTimeout(function() {
+						window.location='start-1.php'
+					}, 3000);
+				</script>
+			<?php
+				} catch(PDOException $e) {
+					echo $sql . "<br>" . $e->getMessage();
+				}
+				$conn = null;
+			?>
+		</p>
+    </body>
+</div>
+</html>

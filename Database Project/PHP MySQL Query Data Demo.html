@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>PHP MySQL Query Data Demo</title>
+    </head>
+    <body>
+        <div id="container">
+            <h2>Current List of Cars </h2>
+            <table border=1 cellspacing=5 cellpadding=5>
+                <thead>
+                    <tr>
+                        <th>VIN</th>
+                        <th>Make</th>
+                        <th>Model</th>
+                        <th>Base Price</th>
+                        <th>Delete?</th>
+                    </tr>
+                </thead>
+                <tbody>
+                                    </tbody>
+            </table>
+		<br><h2>Insert a new Make and Model:</h2>
+		<form action="/insert-1.php" method="post">
+			<table>
+				<tr><td>Make:</td><td><input type="text" id="Make" name="Make" value="?"></td></tr>
+				<tr><td>Model:</td><td><input type="text" id="Model" name="Model" value="?"></td></tr>
+				<tr><td>Base Price:</td><td><input type="number" id="base_price" name="base_price" min="1"></td></tr>
+			</table>
+			<input type="submit" value="INSERT">
+		</form>
+        <table border=1 cellspacing=5 cellpadding=5>
+            <thead>
+                <tr>
+                    <th>MakeModelID</th>
+                    <th>Make</th>
+                    <th>Model</th>
+                    <th>Base Price</th>
+                    <th>Delete?</th>
+                    <th>Edit?</th>
+                </tr>
+            </thead>
+            <tbody>
+                                    <tr>
+                        <td>1</td>
+                        <td>Ford</td>
+                        <td>F150</td>
+                        <td>0</td>
+                        <td><form action="/delete-2.php" method="post"><input type="submit" value="DELETE"><input type="hidden" name="MakeModelID" value="1"></form></td>
+                        <td><form action="/edit-1.php" method="post"><input type="submit" value="EDIT"><input type="hidden" name="MakeModelID" value="1"></form></td>
+                    </tr>
+                                    <tr>
+                        <td>2</td>
+                        <td>Chevy</td>
+                        <td>Volt</td>
+                        <td>0</td>
+                        <td><form action="/delete-2.php" method="post"><input type="submit" value="DELETE"><input type="hidden" name="MakeModelID" value="2"></form></td>
+                        <td><form action="/edit-1.php" method="post"><input type="submit" value="EDIT"><input type="hidden" name="MakeModelID" value="2"></form></td>
+                    </tr>
+                                    <tr>
+                        <td>3</td>
+                        <td>Tesla</td>
+                        <td>Model S</td>
+                        <td>0</td>
+                        <td><form action="/delete-2.php" method="post"><input type="submit" value="DELETE"><input type="hidden" name="MakeModelID" value="3"></form></td>
+                        <td><form action="/edit-1.php" method="post"><input type="submit" value="EDIT"><input type="hidden" name="MakeModelID" value="3"></form></td>
+                    </tr>
+                                    <tr>
+                        <td>4</td>
+                        <td>Ford</td>
+                        <td>Focus</td>
+                        <td>35000</td>
+                        <td><form action="/delete-2.php" method="post"><input type="submit" value="DELETE"><input type="hidden" name="MakeModelID" value="4"></form></td>
+                        <td><form action="/edit-1.php" method="post"><input type="submit" value="EDIT"><input type="hidden" name="MakeModelID" value="4"></form></td>
+                    </tr>
+                                    <tr>
+                        <td>5</td>
+                        <td>Mercedes</td>
+                        <td>AMG GT</td>
+                        <td>0</td>
+                        <td><form action="/delete-2.php" method="post"><input type="submit" value="DELETE"><input type="hidden" name="MakeModelID" value="5"></form></td>
+                        <td><form action="/edit-1.php" method="post"><input type="submit" value="EDIT"><input type="hidden" name="MakeModelID" value="5"></form></td>
+                    </tr>
+                                    <tr>
+                        <td>6</td>
+                        <td>BMW</td>
+                        <td>M3</td>
+                        <td>0</td>
+                        <td><form action="/delete-2.php" method="post"><input type="submit" value="DELETE"><input type="hidden" name="MakeModelID" value="6"></form></td>
+                        <td><form action="/edit-1.php" method="post"><input type="submit" value="EDIT"><input type="hidden" name="MakeModelID" value="6"></form></td>
+                    </tr>
+                                    <tr>
+                        <td>7</td>
+                        <td>Mercedes</td>
+                        <td>AMG GTR</td>
+                        <td>0</td>
+                        <td><form action="/delete-2.php" method="post"><input type="submit" value="DELETE"><input type="hidden" name="MakeModelID" value="7"></form></td>
+                        <td><form action="/edit-1.php" method="post"><input type="submit" value="EDIT"><input type="hidden" name="MakeModelID" value="7"></form></td>
+                    </tr>
+                                    <tr>
+                        <td>8</td>
+                        <td>Ford</td>
+                        <td>F350</td>
+                        <td>0</td>
+                        <td><form action="/delete-2.php" method="post"><input type="submit" value="DELETE"><input type="hidden" name="MakeModelID" value="8"></form></td>
+                        <td><form action="/edit-1.php" method="post"><input type="submit" value="EDIT"><input type="hidden" name="MakeModelID" value="8"></form></td>
+                    </tr>
+                            </tbody>
+        </table>
+		<br>
+        <h2>Report </h2>
+        <table border=1 cellspacing=5 cellpadding=5>
+            <thead>
+                <tr>
+                    <th>VIN</th>
+                    <th>Make</th>
+                    <th>Model</th>
+                    <th>Base Price</th>
+                    <th>Transmission</th>
+                    <th>Installed Options</th>
+                </tr>
+            </thead>
+            <tbody>
+                            </tbody>
+        </table>
+		<br><br><br>
+    </body>
+</div>
+</html>

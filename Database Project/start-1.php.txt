@@ -1,0 +1,125 @@
+<?php
+
+ini_set('display_errors', 1);
+ini_set('display_startup_errors', 1);
+error_reporting(E_ALL);
+
+$username = 'jqm6388';
+$password = '@MyCMPSC431';
+$host = 'localhost';
+$dbname = 'jqm6388_431W';
+
+try {
+    $pdo = new PDO("mysql:host=$host;dbname=$dbname", $username, $password);
+    $sql = 'SELECT cars.VIN, info.Make, info.Model, info.base_price FROM jqm6388_cars cars, jqm6388_Make_Model_Info info WHERE cars.MakeModelID = info.MakeModelID';
+    $q1 = $pdo->query($sql);
+    $q1->setFetchMode(PDO::FETCH_ASSOC);
+    $sql = 'SELECT jqm6388_Make_Model_Info.MakeModelID,jqm6388_Make_Model_Info.Make, jqm6388_Make_Model_Info.Model, jqm6388_Make_Model_Info.base_price FROM jqm6388_Make_Model_Info';
+    $q2 = $pdo->query($sql);
+    $q2->setFetchMode(PDO::FETCH_ASSOC);
+    $sql = 'SELECT cars.VIN, info.Make, info.Model, info.base_price, DT.transmission, DT.fuel_type, DT.mpg, DT.drive_range FROM jqm6388_cars cars, jqm6388_Make_Model_Info info, jqm6388_Drive_Train DT WHERE cars.MakeModelID = info.MakeModelID AND info.MakeModelID = DT.MakeModelID';
+    $q3 = $pdo->query($sql);
+    $q3->setFetchMode(PDO::FETCH_ASSOC);
+} catch (PDOException $e) {
+    die("Could not connect to the database $dbname :" . $e->getMessage());
+}
+?>
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>PHP MySQL Query Data Demo</title>
+    </head>
+    <body>
+        <div id="container">
+            <h2>Current List of Cars </h2>
+            <?php echo '<form method="ROLLBACK" action="rollback.php"> <input type ="Submit"/><form>';?>
+            <table border=1 cellspacing=5 cellpadding=5>
+                <thead>
+                    <tr>
+                        <th>VIN</th>
+                        <th>Make</th>
+                        <th>Model</th>
+                        <th>Base Price</th>
+                        <th>Delete?</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <?php while ($row = $q1->fetch()): ?>
+                        <tr>
+                            <td><?php echo htmlspecialchars($row['VIN']) ?></td>
+                            <td><?php echo htmlspecialchars($row['Make']); ?></td>
+                            <td><?php echo htmlspecialchars($row['Model']); ?></td>
+                            <td><?php echo htmlspecialchars($row['base_price']); ?></td>
+                            <td><?php echo '<form action="/delete-1.php" method="post"><input type="submit" value="DELETE"><input type="hidden" name="VIN" value="' . htmlspecialchars($row['VIN']) . '"></form>'; ?></td>
+                        </tr>
+                    <?php endwhile; ?>
+                </tbody>
+            </table>
+		<br><h2>Insert a new Make and Model:</h2>
+		<form action="/insert-1.php" method="post">
+			<table>
+				<tr><td>Make:</td><td><input type="text" id="Make" name="Make" value="?"></td></tr>
+				<tr><td>Model:</td><td><input type="text" id="Model" name="Model" value="?"></td></tr>
+				<tr><td>Base Price:</td><td><input type="number" id="base_price" name="base_price" min="1"></td></tr>
+			</table>
+			<input type="submit" value="INSERT">
+		</form>
+        <table border=1 cellspacing=5 cellpadding=5>
+            <thead>
+                <tr>
+                    <th>MakeModelID</th>
+                    <th>Make</th>
+                    <th>Model</th>
+                    <th>Base Price</th>
+                    <th>Delete?</th>
+                    <th>Edit?</th>
+                </tr>
+            </thead>
+            <tbody>
+                <?php while ($row = $q2->fetch()): ?>
+                    <tr>
+                        <td><?php echo htmlspecialchars($row['MakeModelID']) ?></td>
+                        <td><?php echo htmlspecialchars($row['Make']); ?></td>
+                        <td><?php echo htmlspecialchars($row['Model']); ?></td>
+                        <td><?php echo htmlspecialchars($row['base_price']); ?></td>
+                        <td><?php echo '<form action="/delete-2.php" method="post"><input type="submit" value="DELETE"><input type="hidden" name="MakeModelID" value="' . htmlspecialchars($row['MakeModelID']) . '"></form>'; ?></td>
+                        <td><?php echo '<form action="/edit-1.php" method="post"><input type="submit" value="DELETE"><input type="hidden" name="MakeModelID" value="' . htmlspecialchars($row['MakeModelID']) . '"></form>'; ?></td>
+                    </tr>
+                <?php endwhile; ?>
+            </tbody>
+        </table>
+		<br>
+        <h2>Report </h2>
+        <table border=1 cellspacing=5 cellpadding=5>
+            <thead>
+                <tr>
+                    <th>VIN</th>
+                    <th>Make</th>
+                    <th>Model</th>
+                    <th>Base Price</th>
+                    <th>Transmission</th>
+                    <th>Fuel Type</th>
+                    <th>MPG</th>
+                    <th>Range</th>
+                </tr>
+            </thead>
+            <tbody>
+                <?php while ($row = $q3->fetch()): ?>
+                    <tr>
+                        <td><?php echo htmlspecialchars($row['VIN']) ?></td>
+                        <td><?php echo htmlspecialchars($row['Make']); ?></td>
+                        <td><?php echo htmlspecialchars($row['Model']); ?></td>
+                        <td><?php echo htmlspecialchars($row['base_price']); ?></td>
+                        <td><?php echo htmlspecialchars($row['transmission']); ?></td>
+                        <td><?php echo htmlspecialchars($row['fuel_type']); ?></td>
+                        <td><?php echo htmlspecialchars($row['mpg']); ?></td>
+                        <td><?php echo htmlspecialchars($row['drive_range']); ?></td>
+                        
+                    </tr>
+                <?php endwhile; ?>
+            </tbody>
+        </table>
+		<br><br><br>
+    </body>
+</div>
+</html>

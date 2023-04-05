@@ -1,0 +1,49 @@
+<?php
+
+ini_set('display_errors', 1);
+ini_set('display_startup_errors', 1);
+error_reporting(E_ALL);
+
+$MakeModelID = $_POST["MakeModelID"];
+$Make = $_POST["Make"];
+$Model = $_POST["MakeModelID"];
+$base_price = $_POST["base_price"];
+
+$username = 'jqm6388';
+$password = '@MyCMPSC431';
+$host = 'localhost';
+$dbname = 'jqm6388_431W';
+
+?>
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>PHP MySQL Query Data Demo</title>
+    </head>
+    <body>
+        <p>
+            <?php
+                echo "Updating Make and Model ". $_POST["MakeModelID"] ." " . $_POST["Make"] . " " . $_POST["Model"] . " " . $_POST["base_price"] . "...";
+                $sql = "UPDATE jqm6388_Make_Model_Info SET Make = '$Make', Model = '$Model', base_price = '$base_price' WHERE jqm6388_Make_Model_Info.MakeModelID = '$MakeModelID'";
+                try {
+                    $conn = new PDO("mysql:host=$host;dbname=$dbname", $username, $password);
+                    $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+                    $conn->exec($sql);
+                    echo "Car updated";
+            ?>
+                <p>You will be redirected in 3 seconds</p>
+                <script>
+                    var timer = setTimeout(function() {
+                        window.location='start-1.php'
+                    }, 3000);
+                </script>
+            <?php
+                } catch(PDOException $e) {
+                    echo $sql . "<br>" . $e->getMessage();
+                }
+                $conn = null;
+            ?>
+        </p>
+    </body>
+</div>
+</html>
