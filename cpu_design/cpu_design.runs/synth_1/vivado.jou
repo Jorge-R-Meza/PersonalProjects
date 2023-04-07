@@ -1,0 +1,13 @@
+#-----------------------------------------------------------
+# Vivado v2022.1 (64-bit)
+# SW Build 3526262 on Mon Apr 18 15:48:16 MDT 2022
+# IP Build 3524634 on Mon Apr 18 20:55:01 MDT 2022
+# Start of session at: Fri Apr  7 00:19:42 2023
+# Process ID: 4976
+# Current directory: C:/Users/jorgemezacabrera/Desktop/cpu_design/cpu_design.runs/synth_1
+# Command line: vivado.exe -log datapath.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source datapath.tcl
+# Log file: C:/Users/jorgemezacabrera/Desktop/cpu_design/cpu_design.runs/synth_1/datapath.vds
+# Journal file: C:/Users/jorgemezacabrera/Desktop/cpu_design/cpu_design.runs/synth_1\vivado.jou
+# Running On: JORGEMEZACA9179, OS: Windows, CPU Frequency: 3200 MHz, CPU Physical cores: 1, Host memory: 6436 MB
+#-----------------------------------------------------------
+source datapath.tcl -notrace

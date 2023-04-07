@@ -1,0 +1,458 @@
+
+*** Running vivado
+    with args -log datapath.vds -m64 -product Vivado -mode batch -messageDb vivado.pb -notrace -source datapath.tcl
+
+
+
+****** Vivado v2022.1 (64-bit)
+  **** SW Build 3526262 on Mon Apr 18 15:48:16 MDT 2022
+  **** IP Build 3524634 on Mon Apr 18 20:55:01 MDT 2022
+    ** Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+
+source datapath.tcl -notrace
+create_project: Time (s): cpu = 00:00:07 ; elapsed = 00:00:07 . Memory (MB): peak = 1309.242 ; gain = 0.000
+Command: read_checkpoint -auto_incremental -incremental C:/Users/jorgemezacabrera/Desktop/cpu_design/cpu_design.srcs/utils_1/imports/synth_1/datapath.dcp
+INFO: [Vivado 12-5825] Read reference checkpoint from C:/Users/jorgemezacabrera/Desktop/cpu_design/cpu_design.srcs/utils_1/imports/synth_1/datapath.dcp for incremental synthesis
+INFO: [Vivado 12-7989] Please ensure there are no constraint changes
+Command: synth_design -top datapath -part xc7z010iclg400-1L
+Starting synth_design
+Attempting to get a license for feature 'Synthesis' and/or device 'xc7z010i'
+INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7z010i'
+INFO: [Designutils 20-5440] No compile time benefit to using incremental synthesis; A full resynthesis will be run
+INFO: [Designutils 20-4379] Flow is switching to default flow due to incremental criteria not met. If you would like to alter this behaviour and have the flow terminate instead, please set the following parameter config_implementation {autoIncr.Synth.RejectBehavior Terminate}
+INFO: [Synth 8-7079] Multithreading enabled for synth_design using a maximum of 2 processes.
+INFO: [Synth 8-7078] Launching helper process for spawning children vivado processes
+INFO: [Synth 8-7075] Helper process launched with PID 10708
+WARNING: [Synth 8-9971] redeclaration of ansi port 'fwda' is not allowed [C:/Users/jorgemezacabrera/Desktop/cpu_design/cpu_design.srcs/sources_1/new/datapath.v:59]
+WARNING: [Synth 8-8983] 'fwda' was previously declared with a range [C:/Users/jorgemezacabrera/Desktop/cpu_design/cpu_design.srcs/sources_1/new/datapath.v:59]
+WARNING: [Synth 8-9971] redeclaration of ansi port 'fwdb' is not allowed [C:/Users/jorgemezacabrera/Desktop/cpu_design/cpu_design.srcs/sources_1/new/datapath.v:60]
+WARNING: [Synth 8-8983] 'fwdb' was previously declared with a range [C:/Users/jorgemezacabrera/Desktop/cpu_design/cpu_design.srcs/sources_1/new/datapath.v:60]
+---------------------------------------------------------------------------------
+Starting Synthesize : Time (s): cpu = 00:00:12 ; elapsed = 00:00:12 . Memory (MB): peak = 1309.242 ; gain = 0.000
+---------------------------------------------------------------------------------
+INFO: [Synth 8-6157] synthesizing module 'datapath' [C:/Users/jorgemezacabrera/Desktop/cpu_design/cpu_design.srcs/sources_1/new/datapath.v:23]
+INFO: [Synth 8-6157] synthesizing module 'program_counter' [C:/Users/jorgemezacabrera/Desktop/cpu_design/cpu_design.srcs/sources_1/new/program_counter.v:22]
+INFO: [Synth 8-6155] done synthesizing module 'program_counter' (0#1) [C:/Users/jorgemezacabrera/Desktop/cpu_design/cpu_design.srcs/sources_1/new/program_counter.v:22]
+INFO: [Synth 8-6157] synthesizing module 'pc_adder' [C:/Users/jorgemezacabrera/Desktop/cpu_design/cpu_design.srcs/sources_1/new/pc_adder.v:22]
+INFO: [Synth 8-6155] done synthesizing module 'pc_adder' (0#1) [C:/Users/jorgemezacabrera/Desktop/cpu_design/cpu_design.srcs/sources_1/new/pc_adder.v:22]
+INFO: [Synth 8-6157] synthesizing module 'instruction_memory' [C:/Users/jorgemezacabrera/Desktop/cpu_design/cpu_design.srcs/sources_1/new/instruction_memory.v:22]
+INFO: [Synth 8-6155] done synthesizing module 'instruction_memory' (0#1) [C:/Users/jorgemezacabrera/Desktop/cpu_design/cpu_design.srcs/sources_1/new/instruction_memory.v:22]
+INFO: [Synth 8-6157] synthesizing module 'IFID' [C:/Users/jorgemezacabrera/Desktop/cpu_design/cpu_design.srcs/sources_1/new/IFID.v:22]
+INFO: [Synth 8-6155] done synthesizing module 'IFID' (0#1) [C:/Users/jorgemezacabrera/Desktop/cpu_design/cpu_design.srcs/sources_1/new/IFID.v:22]
+INFO: [Synth 8-6157] synthesizing module 'immediate_extender' [C:/Users/jorgemezacabrera/Desktop/cpu_design/cpu_design.srcs/sources_1/new/immediate_extender.v:22]
+INFO: [Synth 8-6155] done synthesizing module 'immediate_extender' (0#1) [C:/Users/jorgemezacabrera/Desktop/cpu_design/cpu_design.srcs/sources_1/new/immediate_extender.v:22]
+INFO: [Synth 8-6157] synthesizing module 'register_file' [C:/Users/jorgemezacabrera/Desktop/cpu_design/cpu_design.srcs/sources_1/new/register_file.v:22]
+INFO: [Synth 8-6155] done synthesizing module 'register_file' (0#1) [C:/Users/jorgemezacabrera/Desktop/cpu_design/cpu_design.srcs/sources_1/new/register_file.v:22]
+WARNING: [Synth 8-689] width (1) of port connection 'qb' does not match port width (32) of module 'register_file' [C:/Users/jorgemezacabrera/Desktop/cpu_design/cpu_design.srcs/sources_1/new/datapath.v:98]
+INFO: [Synth 8-6157] synthesizing module 'Wb_Mux' [C:/Users/jorgemezacabrera/Desktop/cpu_design/cpu_design.srcs/sources_1/new/Wb_Mux.v:22]
+INFO: [Synth 8-6155] done synthesizing module 'Wb_Mux' (0#1) [C:/Users/jorgemezacabrera/Desktop/cpu_design/cpu_design.srcs/sources_1/new/Wb_Mux.v:22]
+INFO: [Synth 8-6157] synthesizing module 'IDEXE' [C:/Users/jorgemezacabrera/Desktop/cpu_design/cpu_design.srcs/sources_1/new/IDEXE.v:22]
+INFO: [Synth 8-6155] done synthesizing module 'IDEXE' (0#1) [C:/Users/jorgemezacabrera/Desktop/cpu_design/cpu_design.srcs/sources_1/new/IDEXE.v:22]
+INFO: [Synth 8-6157] synthesizing module 'control_unit' [C:/Users/jorgemezacabrera/Desktop/cpu_design/cpu_design.srcs/sources_1/new/control_unit.v:22]
+INFO: [Synth 8-155] case statement is not full and has no default [C:/Users/jorgemezacabrera/Desktop/cpu_design/cpu_design.srcs/sources_1/new/control_unit.v:53]
+INFO: [Synth 8-155] case statement is not full and has no default [C:/Users/jorgemezacabrera/Desktop/cpu_design/cpu_design.srcs/sources_1/new/control_unit.v:45]
+INFO: [Synth 8-6155] done synthesizing module 'control_unit' (0#1) [C:/Users/jorgemezacabrera/Desktop/cpu_design/cpu_design.srcs/sources_1/new/control_unit.v:22]
+WARNING: [Synth 8-689] width (2) of port connection 'fwda' does not match port width (1) of module 'control_unit' [C:/Users/jorgemezacabrera/Desktop/cpu_design/cpu_design.srcs/sources_1/new/datapath.v:105]
+WARNING: [Synth 8-689] width (2) of port connection 'fwdb' does not match port width (1) of module 'control_unit' [C:/Users/jorgemezacabrera/Desktop/cpu_design/cpu_design.srcs/sources_1/new/datapath.v:105]
+INFO: [Synth 8-6157] synthesizing module 'regrt_mux' [C:/Users/jorgemezacabrera/Desktop/cpu_design/cpu_design.srcs/sources_1/new/regrt_mux.v:21]
+INFO: [Synth 8-6155] done synthesizing module 'regrt_mux' (0#1) [C:/Users/jorgemezacabrera/Desktop/cpu_design/cpu_design.srcs/sources_1/new/regrt_mux.v:21]
+INFO: [Synth 8-6157] synthesizing module 'ALU' [C:/Users/jorgemezacabrera/Desktop/cpu_design/cpu_design.srcs/sources_1/new/ALU.v:21]
+WARNING: [Synth 8-6090] variable 'r' is written by both blocking and non-blocking assignments, entire logic could be removed [C:/Users/jorgemezacabrera/Desktop/cpu_design/cpu_design.srcs/sources_1/new/ALU.v:39]
+WARNING: [Synth 8-6090] variable 'r' is written by both blocking and non-blocking assignments, entire logic could be removed [C:/Users/jorgemezacabrera/Desktop/cpu_design/cpu_design.srcs/sources_1/new/ALU.v:44]
+WARNING: [Synth 8-6090] variable 'r' is written by both blocking and non-blocking assignments, entire logic could be removed [C:/Users/jorgemezacabrera/Desktop/cpu_design/cpu_design.srcs/sources_1/new/ALU.v:49]
+WARNING: [Synth 8-6090] variable 'r' is written by both blocking and non-blocking assignments, entire logic could be removed [C:/Users/jorgemezacabrera/Desktop/cpu_design/cpu_design.srcs/sources_1/new/ALU.v:54]
+INFO: [Synth 8-6155] done synthesizing module 'ALU' (0#1) [C:/Users/jorgemezacabrera/Desktop/cpu_design/cpu_design.srcs/sources_1/new/ALU.v:21]
+INFO: [Synth 8-6157] synthesizing module 'ALU_Mux' [C:/Users/jorgemezacabrera/Desktop/cpu_design/cpu_design.srcs/sources_1/new/ALU_Mux.v:21]
+INFO: [Synth 8-6155] done synthesizing module 'ALU_Mux' (0#1) [C:/Users/jorgemezacabrera/Desktop/cpu_design/cpu_design.srcs/sources_1/new/ALU_Mux.v:21]
+INFO: [Synth 8-6157] synthesizing module 'EXEMEM' [C:/Users/jorgemezacabrera/Desktop/cpu_design/cpu_design.srcs/sources_1/new/EXEMEM.v:21]
+INFO: [Synth 8-6155] done synthesizing module 'EXEMEM' (0#1) [C:/Users/jorgemezacabrera/Desktop/cpu_design/cpu_design.srcs/sources_1/new/EXEMEM.v:21]
+INFO: [Synth 8-6157] synthesizing module 'DM_MWMEM' [C:/Users/jorgemezacabrera/Desktop/cpu_design/cpu_design.srcs/sources_1/new/DM_MWMEM.v:21]
+INFO: [Synth 8-6155] done synthesizing module 'DM_MWMEM' (0#1) [C:/Users/jorgemezacabrera/Desktop/cpu_design/cpu_design.srcs/sources_1/new/DM_MWMEM.v:21]
+INFO: [Synth 8-6157] synthesizing module 'MEMWB' [C:/Users/jorgemezacabrera/Desktop/cpu_design/cpu_design.srcs/sources_1/new/MEMWB.v:21]
+INFO: [Synth 8-6155] done synthesizing module 'MEMWB' (0#1) [C:/Users/jorgemezacabrera/Desktop/cpu_design/cpu_design.srcs/sources_1/new/MEMWB.v:21]
+INFO: [Synth 8-6157] synthesizing module 'FwdA_Mux' [C:/Users/jorgemezacabrera/Desktop/cpu_design/cpu_design.srcs/sources_1/new/FwdA_Mux.v:23]
+INFO: [Synth 8-6155] done synthesizing module 'FwdA_Mux' (0#1) [C:/Users/jorgemezacabrera/Desktop/cpu_design/cpu_design.srcs/sources_1/new/FwdA_Mux.v:23]
+INFO: [Synth 8-6157] synthesizing module 'FwdB_Mux' [C:/Users/jorgemezacabrera/Desktop/cpu_design/cpu_design.srcs/sources_1/new/FwdB_Mux.v:23]
+INFO: [Synth 8-6155] done synthesizing module 'FwdB_Mux' (0#1) [C:/Users/jorgemezacabrera/Desktop/cpu_design/cpu_design.srcs/sources_1/new/FwdB_Mux.v:23]
+INFO: [Synth 8-6155] done synthesizing module 'datapath' (0#1) [C:/Users/jorgemezacabrera/Desktop/cpu_design/cpu_design.srcs/sources_1/new/datapath.v:23]
+WARNING: [Synth 8-3848] Net aluimm in module/entity datapath does not have driver. [C:/Users/jorgemezacabrera/Desktop/cpu_design/cpu_design.srcs/sources_1/new/datapath.v:57]
+WARNING: [Synth 8-3848] Net qa in module/entity datapath does not have driver. [C:/Users/jorgemezacabrera/Desktop/cpu_design/cpu_design.srcs/sources_1/new/datapath.v:63]
+WARNING: [Synth 8-3848] Net qb in module/entity datapath does not have driver. [C:/Users/jorgemezacabrera/Desktop/cpu_design/cpu_design.srcs/sources_1/new/datapath.v:64]
+WARNING: [Synth 8-3917] design datapath has port fwdb[1] driven by constant 0
+WARNING: [Synth 8-3917] design datapath has port fwda[1] driven by constant 0
+WARNING: [Synth 8-7129] Port mr[31] in module DM_MWMEM is either unconnected or has no load
+WARNING: [Synth 8-7129] Port mr[30] in module DM_MWMEM is either unconnected or has no load
+WARNING: [Synth 8-7129] Port mr[29] in module DM_MWMEM is either unconnected or has no load
+WARNING: [Synth 8-7129] Port mr[28] in module DM_MWMEM is either unconnected or has no load
+WARNING: [Synth 8-7129] Port mr[27] in module DM_MWMEM is either unconnected or has no load
+WARNING: [Synth 8-7129] Port mr[26] in module DM_MWMEM is either unconnected or has no load
+WARNING: [Synth 8-7129] Port mr[25] in module DM_MWMEM is either unconnected or has no load
+WARNING: [Synth 8-7129] Port mr[24] in module DM_MWMEM is either unconnected or has no load
+WARNING: [Synth 8-7129] Port mr[23] in module DM_MWMEM is either unconnected or has no load
+WARNING: [Synth 8-7129] Port mr[22] in module DM_MWMEM is either unconnected or has no load
+WARNING: [Synth 8-7129] Port mr[21] in module DM_MWMEM is either unconnected or has no load
+WARNING: [Synth 8-7129] Port mr[20] in module DM_MWMEM is either unconnected or has no load
+WARNING: [Synth 8-7129] Port mr[19] in module DM_MWMEM is either unconnected or has no load
+WARNING: [Synth 8-7129] Port mr[18] in module DM_MWMEM is either unconnected or has no load
+WARNING: [Synth 8-7129] Port mr[17] in module DM_MWMEM is either unconnected or has no load
+WARNING: [Synth 8-7129] Port mr[16] in module DM_MWMEM is either unconnected or has no load
+WARNING: [Synth 8-7129] Port mr[15] in module DM_MWMEM is either unconnected or has no load
+WARNING: [Synth 8-7129] Port mr[14] in module DM_MWMEM is either unconnected or has no load
+WARNING: [Synth 8-7129] Port mr[13] in module DM_MWMEM is either unconnected or has no load
+WARNING: [Synth 8-7129] Port mr[12] in module DM_MWMEM is either unconnected or has no load
+WARNING: [Synth 8-7129] Port mr[11] in module DM_MWMEM is either unconnected or has no load
+WARNING: [Synth 8-7129] Port mr[10] in module DM_MWMEM is either unconnected or has no load
+WARNING: [Synth 8-7129] Port mr[9] in module DM_MWMEM is either unconnected or has no load
+WARNING: [Synth 8-7129] Port mr[8] in module DM_MWMEM is either unconnected or has no load
+WARNING: [Synth 8-7129] Port mr[7] in module DM_MWMEM is either unconnected or has no load
+WARNING: [Synth 8-7129] Port mr[6] in module DM_MWMEM is either unconnected or has no load
+WARNING: [Synth 8-7129] Port mwreg in module control_unit is either unconnected or has no load
+WARNING: [Synth 8-7129] Port em2reg in module control_unit is either unconnected or has no load
+WARNING: [Synth 8-7129] Port ewreg in module control_unit is either unconnected or has no load
+WARNING: [Synth 8-7129] Port pc[31] in module instruction_memory is either unconnected or has no load
+WARNING: [Synth 8-7129] Port pc[30] in module instruction_memory is either unconnected or has no load
+WARNING: [Synth 8-7129] Port pc[29] in module instruction_memory is either unconnected or has no load
+WARNING: [Synth 8-7129] Port pc[28] in module instruction_memory is either unconnected or has no load
+WARNING: [Synth 8-7129] Port pc[27] in module instruction_memory is either unconnected or has no load
+WARNING: [Synth 8-7129] Port pc[26] in module instruction_memory is either unconnected or has no load
+WARNING: [Synth 8-7129] Port pc[25] in module instruction_memory is either unconnected or has no load
+WARNING: [Synth 8-7129] Port pc[24] in module instruction_memory is either unconnected or has no load
+WARNING: [Synth 8-7129] Port pc[23] in module instruction_memory is either unconnected or has no load
+WARNING: [Synth 8-7129] Port pc[22] in module instruction_memory is either unconnected or has no load
+WARNING: [Synth 8-7129] Port pc[21] in module instruction_memory is either unconnected or has no load
+WARNING: [Synth 8-7129] Port pc[20] in module instruction_memory is either unconnected or has no load
+WARNING: [Synth 8-7129] Port pc[19] in module instruction_memory is either unconnected or has no load
+WARNING: [Synth 8-7129] Port pc[18] in module instruction_memory is either unconnected or has no load
+WARNING: [Synth 8-7129] Port pc[17] in module instruction_memory is either unconnected or has no load
+WARNING: [Synth 8-7129] Port pc[16] in module instruction_memory is either unconnected or has no load
+WARNING: [Synth 8-7129] Port pc[15] in module instruction_memory is either unconnected or has no load
+WARNING: [Synth 8-7129] Port pc[14] in module instruction_memory is either unconnected or has no load
+WARNING: [Synth 8-7129] Port pc[13] in module instruction_memory is either unconnected or has no load
+WARNING: [Synth 8-7129] Port pc[12] in module instruction_memory is either unconnected or has no load
+WARNING: [Synth 8-7129] Port pc[11] in module instruction_memory is either unconnected or has no load
+WARNING: [Synth 8-7129] Port pc[10] in module instruction_memory is either unconnected or has no load
+WARNING: [Synth 8-7129] Port pc[9] in module instruction_memory is either unconnected or has no load
+WARNING: [Synth 8-7129] Port pc[8] in module instruction_memory is either unconnected or has no load
+WARNING: [Synth 8-7129] Port pc[1] in module instruction_memory is either unconnected or has no load
+WARNING: [Synth 8-7129] Port pc[0] in module instruction_memory is either unconnected or has no load
+---------------------------------------------------------------------------------
+Finished Synthesize : Time (s): cpu = 00:00:15 ; elapsed = 00:00:16 . Memory (MB): peak = 1309.242 ; gain = 0.000
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Constraint Validation : Time (s): cpu = 00:00:16 ; elapsed = 00:00:16 . Memory (MB): peak = 1309.242 ; gain = 0.000
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Loading Part and Timing Information
+---------------------------------------------------------------------------------
+Loading part: xc7z010iclg400-1L
+---------------------------------------------------------------------------------
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:16 ; elapsed = 00:00:16 . Memory (MB): peak = 1309.242 ; gain = 0.000
+---------------------------------------------------------------------------------
+INFO: [Device 21-403] Loading part xc7z010iclg400-1L
+WARNING: [Synth 8-327] inferring latch for variable 'wbData_reg' [C:/Users/jorgemezacabrera/Desktop/cpu_design/cpu_design.srcs/sources_1/new/Wb_Mux.v:34]
+WARNING: [Synth 8-327] inferring latch for variable 'wreg_reg' [C:/Users/jorgemezacabrera/Desktop/cpu_design/cpu_design.srcs/sources_1/new/control_unit.v:48]
+WARNING: [Synth 8-327] inferring latch for variable 'm2reg_reg' [C:/Users/jorgemezacabrera/Desktop/cpu_design/cpu_design.srcs/sources_1/new/control_unit.v:49]
+WARNING: [Synth 8-327] inferring latch for variable 'wmem_reg' [C:/Users/jorgemezacabrera/Desktop/cpu_design/cpu_design.srcs/sources_1/new/control_unit.v:50]
+WARNING: [Synth 8-327] inferring latch for variable 'aluc_reg' [C:/Users/jorgemezacabrera/Desktop/cpu_design/cpu_design.srcs/sources_1/new/control_unit.v:59]
+WARNING: [Synth 8-327] inferring latch for variable 'destReg_reg' [C:/Users/jorgemezacabrera/Desktop/cpu_design/cpu_design.srcs/sources_1/new/regrt_mux.v:32]
+WARNING: [Synth 8-327] inferring latch for variable 'r_reg' [C:/Users/jorgemezacabrera/Desktop/cpu_design/cpu_design.srcs/sources_1/new/ALU.v:34]
+WARNING: [Synth 8-327] inferring latch for variable 'b_reg' [C:/Users/jorgemezacabrera/Desktop/cpu_design/cpu_design.srcs/sources_1/new/ALU_Mux.v:33]
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:16 ; elapsed = 00:00:17 . Memory (MB): peak = 1309.242 ; gain = 0.000
+---------------------------------------------------------------------------------
+No constraint files found.
+---------------------------------------------------------------------------------
+Start RTL Component Statistics 
+---------------------------------------------------------------------------------
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input   32 Bit       Adders := 1     
+	   3 Input   32 Bit       Adders := 1     
++---XORs : 
+	   2 Input     32 Bit         XORs := 1     
++---Registers : 
+	               32 Bit    Registers := 9     
+	                5 Bit    Registers := 3     
+	                4 Bit    Registers := 1     
+	                1 Bit    Registers := 9     
++---Muxes : 
+	   6 Input   32 Bit        Muxes := 1     
+	   2 Input   32 Bit        Muxes := 3     
+	   4 Input   32 Bit        Muxes := 3     
+	   2 Input    5 Bit        Muxes := 1     
+	   2 Input    4 Bit        Muxes := 1     
+	   6 Input    4 Bit        Muxes := 1     
+	   2 Input    1 Bit        Muxes := 4     
+	   3 Input    1 Bit        Muxes := 2     
+	   6 Input    1 Bit        Muxes := 2     
+---------------------------------------------------------------------------------
+Finished RTL Component Statistics 
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Part Resource Summary
+---------------------------------------------------------------------------------
+Part Resources:
+DSPs: 80 (col length:40)
+BRAMs: 120 (col length: RAMB18 40 RAMB36 20)
+---------------------------------------------------------------------------------
+Finished Part Resource Summary
+---------------------------------------------------------------------------------
+No constraint files found.
+---------------------------------------------------------------------------------
+Start Cross Boundary and Area Optimization
+---------------------------------------------------------------------------------
+WARNING: [Synth 8-7080] Parallel synthesis criteria is not met
+WARNING: [Synth 8-3917] design datapath has port instOut[30] driven by constant 0
+WARNING: [Synth 8-3917] design datapath has port instOut[29] driven by constant 0
+WARNING: [Synth 8-3917] design datapath has port instOut[28] driven by constant 0
+WARNING: [Synth 8-3917] design datapath has port instOut[25] driven by constant 0
+WARNING: [Synth 8-3917] design datapath has port instOut[24] driven by constant 0
+WARNING: [Synth 8-3917] design datapath has port instOut[23] driven by constant 0
+WARNING: [Synth 8-3917] design datapath has port instOut[20] driven by constant 0
+WARNING: [Synth 8-3917] design datapath has port instOut[15] driven by constant 0
+WARNING: [Synth 8-3917] design datapath has port instOut[14] driven by constant 0
+WARNING: [Synth 8-3917] design datapath has port instOut[11] driven by constant 0
+WARNING: [Synth 8-3917] design datapath has port instOut[10] driven by constant 0
+WARNING: [Synth 8-3917] design datapath has port instOut[9] driven by constant 0
+WARNING: [Synth 8-3917] design datapath has port instOut[8] driven by constant 0
+WARNING: [Synth 8-3917] design datapath has port instOut[7] driven by constant 0
+WARNING: [Synth 8-3917] design datapath has port instOut[6] driven by constant 0
+WARNING: [Synth 8-3917] design datapath has port instOut[4] driven by constant 0
+WARNING: [Synth 8-3917] design datapath has port instOut[1] driven by constant 0
+WARNING: [Synth 8-3917] design datapath has port instOut[0] driven by constant 0
+WARNING: [Synth 8-3917] design datapath has port fwdb[1] driven by constant 0
+WARNING: [Synth 8-3917] design datapath has port fwda[1] driven by constant 0
+WARNING: [Synth 8-6014] Unused sequential element registerFile/registers_reg was removed. 
+WARNING: [Synth 8-3332] Sequential element (wb_mux/wbData_reg[31]) is unused and will be removed from module datapath.
+WARNING: [Synth 8-3332] Sequential element (wb_mux/wbData_reg[30]) is unused and will be removed from module datapath.
+WARNING: [Synth 8-3332] Sequential element (wb_mux/wbData_reg[29]) is unused and will be removed from module datapath.
+WARNING: [Synth 8-3332] Sequential element (wb_mux/wbData_reg[28]) is unused and will be removed from module datapath.
+WARNING: [Synth 8-3332] Sequential element (wb_mux/wbData_reg[27]) is unused and will be removed from module datapath.
+WARNING: [Synth 8-3332] Sequential element (wb_mux/wbData_reg[26]) is unused and will be removed from module datapath.
+WARNING: [Synth 8-3332] Sequential element (wb_mux/wbData_reg[25]) is unused and will be removed from module datapath.
+WARNING: [Synth 8-3332] Sequential element (wb_mux/wbData_reg[24]) is unused and will be removed from module datapath.
+WARNING: [Synth 8-3332] Sequential element (wb_mux/wbData_reg[23]) is unused and will be removed from module datapath.
+WARNING: [Synth 8-3332] Sequential element (wb_mux/wbData_reg[22]) is unused and will be removed from module datapath.
+WARNING: [Synth 8-3332] Sequential element (wb_mux/wbData_reg[21]) is unused and will be removed from module datapath.
+WARNING: [Synth 8-3332] Sequential element (wb_mux/wbData_reg[20]) is unused and will be removed from module datapath.
+WARNING: [Synth 8-3332] Sequential element (wb_mux/wbData_reg[19]) is unused and will be removed from module datapath.
+WARNING: [Synth 8-3332] Sequential element (wb_mux/wbData_reg[18]) is unused and will be removed from module datapath.
+WARNING: [Synth 8-3332] Sequential element (wb_mux/wbData_reg[17]) is unused and will be removed from module datapath.
+WARNING: [Synth 8-3332] Sequential element (wb_mux/wbData_reg[16]) is unused and will be removed from module datapath.
+WARNING: [Synth 8-3332] Sequential element (wb_mux/wbData_reg[15]) is unused and will be removed from module datapath.
+WARNING: [Synth 8-3332] Sequential element (wb_mux/wbData_reg[14]) is unused and will be removed from module datapath.
+WARNING: [Synth 8-3332] Sequential element (wb_mux/wbData_reg[13]) is unused and will be removed from module datapath.
+WARNING: [Synth 8-3332] Sequential element (wb_mux/wbData_reg[12]) is unused and will be removed from module datapath.
+WARNING: [Synth 8-3332] Sequential element (wb_mux/wbData_reg[11]) is unused and will be removed from module datapath.
+WARNING: [Synth 8-3332] Sequential element (wb_mux/wbData_reg[10]) is unused and will be removed from module datapath.
+WARNING: [Synth 8-3332] Sequential element (wb_mux/wbData_reg[9]) is unused and will be removed from module datapath.
+WARNING: [Synth 8-3332] Sequential element (wb_mux/wbData_reg[8]) is unused and will be removed from module datapath.
+WARNING: [Synth 8-3332] Sequential element (wb_mux/wbData_reg[7]) is unused and will be removed from module datapath.
+WARNING: [Synth 8-3332] Sequential element (wb_mux/wbData_reg[6]) is unused and will be removed from module datapath.
+WARNING: [Synth 8-3332] Sequential element (wb_mux/wbData_reg[5]) is unused and will be removed from module datapath.
+WARNING: [Synth 8-3332] Sequential element (wb_mux/wbData_reg[4]) is unused and will be removed from module datapath.
+WARNING: [Synth 8-3332] Sequential element (wb_mux/wbData_reg[3]) is unused and will be removed from module datapath.
+WARNING: [Synth 8-3332] Sequential element (wb_mux/wbData_reg[2]) is unused and will be removed from module datapath.
+WARNING: [Synth 8-3332] Sequential element (wb_mux/wbData_reg[1]) is unused and will be removed from module datapath.
+WARNING: [Synth 8-3332] Sequential element (wb_mux/wbData_reg[0]) is unused and will be removed from module datapath.
+WARNING: [Synth 8-3332] Sequential element (controlUnit/wreg_reg) is unused and will be removed from module datapath.
+WARNING: [Synth 8-3332] Sequential element (controlUnit/m2reg_reg) is unused and will be removed from module datapath.
+WARNING: [Synth 8-3332] Sequential element (controlUnit/wmem_reg) is unused and will be removed from module datapath.
+WARNING: [Synth 8-3332] Sequential element (controlUnit/aluc_reg[3]) is unused and will be removed from module datapath.
+WARNING: [Synth 8-3332] Sequential element (regrtMux/destReg_reg[4]) is unused and will be removed from module datapath.
+WARNING: [Synth 8-3332] Sequential element (regrtMux/destReg_reg[3]) is unused and will be removed from module datapath.
+WARNING: [Synth 8-3332] Sequential element (regrtMux/destReg_reg[2]) is unused and will be removed from module datapath.
+WARNING: [Synth 8-3332] Sequential element (regrtMux/destReg_reg[1]) is unused and will be removed from module datapath.
+WARNING: [Synth 8-3332] Sequential element (regrtMux/destReg_reg[0]) is unused and will be removed from module datapath.
+WARNING: [Synth 8-3332] Sequential element (alu/r_reg[31]) is unused and will be removed from module datapath.
+WARNING: [Synth 8-3332] Sequential element (alu_mux/b_reg[31]) is unused and will be removed from module datapath.
+WARNING: [Synth 8-3332] Sequential element (alu_mux/b_reg[30]) is unused and will be removed from module datapath.
+WARNING: [Synth 8-3332] Sequential element (alu_mux/b_reg[29]) is unused and will be removed from module datapath.
+WARNING: [Synth 8-3332] Sequential element (alu_mux/b_reg[28]) is unused and will be removed from module datapath.
+WARNING: [Synth 8-3332] Sequential element (alu_mux/b_reg[27]) is unused and will be removed from module datapath.
+WARNING: [Synth 8-3332] Sequential element (alu_mux/b_reg[26]) is unused and will be removed from module datapath.
+WARNING: [Synth 8-3332] Sequential element (alu_mux/b_reg[25]) is unused and will be removed from module datapath.
+WARNING: [Synth 8-3332] Sequential element (alu_mux/b_reg[24]) is unused and will be removed from module datapath.
+WARNING: [Synth 8-3332] Sequential element (alu_mux/b_reg[23]) is unused and will be removed from module datapath.
+WARNING: [Synth 8-3332] Sequential element (alu_mux/b_reg[22]) is unused and will be removed from module datapath.
+WARNING: [Synth 8-3332] Sequential element (alu_mux/b_reg[21]) is unused and will be removed from module datapath.
+WARNING: [Synth 8-3332] Sequential element (alu_mux/b_reg[20]) is unused and will be removed from module datapath.
+WARNING: [Synth 8-3332] Sequential element (alu_mux/b_reg[19]) is unused and will be removed from module datapath.
+WARNING: [Synth 8-3332] Sequential element (alu_mux/b_reg[18]) is unused and will be removed from module datapath.
+WARNING: [Synth 8-3332] Sequential element (alu_mux/b_reg[17]) is unused and will be removed from module datapath.
+WARNING: [Synth 8-3332] Sequential element (alu_mux/b_reg[16]) is unused and will be removed from module datapath.
+WARNING: [Synth 8-3332] Sequential element (alu_mux/b_reg[15]) is unused and will be removed from module datapath.
+WARNING: [Synth 8-3332] Sequential element (alu_mux/b_reg[14]) is unused and will be removed from module datapath.
+WARNING: [Synth 8-3332] Sequential element (alu_mux/b_reg[13]) is unused and will be removed from module datapath.
+WARNING: [Synth 8-3332] Sequential element (alu_mux/b_reg[12]) is unused and will be removed from module datapath.
+WARNING: [Synth 8-3332] Sequential element (alu_mux/b_reg[11]) is unused and will be removed from module datapath.
+WARNING: [Synth 8-3332] Sequential element (alu_mux/b_reg[10]) is unused and will be removed from module datapath.
+WARNING: [Synth 8-3332] Sequential element (alu_mux/b_reg[9]) is unused and will be removed from module datapath.
+WARNING: [Synth 8-3332] Sequential element (alu_mux/b_reg[8]) is unused and will be removed from module datapath.
+WARNING: [Synth 8-3332] Sequential element (alu_mux/b_reg[7]) is unused and will be removed from module datapath.
+WARNING: [Synth 8-3332] Sequential element (alu_mux/b_reg[6]) is unused and will be removed from module datapath.
+WARNING: [Synth 8-3332] Sequential element (alu_mux/b_reg[5]) is unused and will be removed from module datapath.
+WARNING: [Synth 8-3332] Sequential element (alu_mux/b_reg[4]) is unused and will be removed from module datapath.
+WARNING: [Synth 8-3332] Sequential element (alu_mux/b_reg[3]) is unused and will be removed from module datapath.
+WARNING: [Synth 8-3332] Sequential element (alu_mux/b_reg[2]) is unused and will be removed from module datapath.
+WARNING: [Synth 8-3332] Sequential element (alu_mux/b_reg[1]) is unused and will be removed from module datapath.
+WARNING: [Synth 8-3332] Sequential element (alu_mux/b_reg[0]) is unused and will be removed from module datapath.
+---------------------------------------------------------------------------------
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:34 ; elapsed = 00:00:37 . Memory (MB): peak = 1309.242 ; gain = 0.000
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start ROM, RAM, DSP, Shift Register and Retiming Reporting
+---------------------------------------------------------------------------------
+
+Distributed RAM: Preliminary Mapping Report (see note below)
++------------+-----------------------+-----------+----------------------+----------------+
+|Module Name | RTL Object            | Inference | Size (Depth x Width) | Primitives     | 
++------------+-----------------------+-----------+----------------------+----------------+
+|datapath    | dm_mwmem/memoryDM_reg | Implied   | 64 x 32              | RAM64X1S x 32  | 
++------------+-----------------------+-----------+----------------------+----------------+
+
+Note: The table above is a preliminary report that shows the Distributed RAMs at the current stage of the synthesis flow. Some Distributed RAMs may be reimplemented as non Distributed RAM primitives later in the synthesis flow. Multiple instantiated RAMs are reported only once.
+---------------------------------------------------------------------------------
+Finished ROM, RAM, DSP, Shift Register and Retiming Reporting
+---------------------------------------------------------------------------------
+No constraint files found.
+---------------------------------------------------------------------------------
+Start Timing Optimization
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Timing Optimization : Time (s): cpu = 00:00:34 ; elapsed = 00:00:38 . Memory (MB): peak = 1309.242 ; gain = 0.000
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start ROM, RAM, DSP, Shift Register and Retiming Reporting
+---------------------------------------------------------------------------------
+
+Distributed RAM: Final Mapping Report
++------------+-----------------------+-----------+----------------------+----------------+
+|Module Name | RTL Object            | Inference | Size (Depth x Width) | Primitives     | 
++------------+-----------------------+-----------+----------------------+----------------+
+|datapath    | dm_mwmem/memoryDM_reg | Implied   | 64 x 32              | RAM64X1S x 32  | 
++------------+-----------------------+-----------+----------------------+----------------+
+
+---------------------------------------------------------------------------------
+Finished ROM, RAM, DSP, Shift Register and Retiming Reporting
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Technology Mapping
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Technology Mapping : Time (s): cpu = 00:00:34 ; elapsed = 00:00:38 . Memory (MB): peak = 1309.242 ; gain = 0.000
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished IO Insertion : Time (s): cpu = 00:00:44 ; elapsed = 00:00:48 . Memory (MB): peak = 1309.242 ; gain = 0.000
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Instances
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:44 ; elapsed = 00:00:48 . Memory (MB): peak = 1309.242 ; gain = 0.000
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Rebuilding User Hierarchy
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:44 ; elapsed = 00:00:48 . Memory (MB): peak = 1309.242 ; gain = 0.000
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Ports
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:44 ; elapsed = 00:00:48 . Memory (MB): peak = 1309.242 ; gain = 0.000
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:44 ; elapsed = 00:00:48 . Memory (MB): peak = 1309.242 ; gain = 0.000
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Nets
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:44 ; elapsed = 00:00:48 . Memory (MB): peak = 1309.242 ; gain = 0.000
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Writing Synthesis Report
+---------------------------------------------------------------------------------
+
+Report BlackBoxes: 
++-+--------------+----------+
+| |BlackBox name |Instances |
++-+--------------+----------+
++-+--------------+----------+
+
+Report Cell Usage: 
++------+---------+------+
+|      |Cell     |Count |
++------+---------+------+
+|1     |BUFG     |     1|
+|2     |CARRY4   |     8|
+|3     |LUT1     |     3|
+|4     |LUT2     |    19|
+|5     |LUT3     |     4|
+|6     |LUT6     |     5|
+|7     |RAM64X1S |    12|
+|8     |FDRE     |    66|
+|9     |LD       |     1|
+|10    |IBUF     |     1|
+|11    |OBUF     |   384|
++------+---------+------+
+
+Report Instance Areas: 
++------+-----------------+----------------+------+
+|      |Instance         |Module          |Cells |
++------+-----------------+----------------+------+
+|1     |top              |                |   504|
+|2     |  dm_mwmem       |DM_MWMEM        |    12|
+|3     |  controlUnit    |control_unit    |     1|
+|4     |  exemem         |EXEMEM          |     9|
+|5     |  idexe          |IDEXE           |    11|
+|6     |  ifid           |IFID            |    11|
+|7     |  memwb          |MEMWB           |    29|
+|8     |  programCounter |program_counter |    44|
++------+-----------------+----------------+------+
+---------------------------------------------------------------------------------
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:44 ; elapsed = 00:00:48 . Memory (MB): peak = 1309.242 ; gain = 0.000
+---------------------------------------------------------------------------------
+Synthesis finished with 0 errors, 0 critical warnings and 175 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:44 ; elapsed = 00:00:48 . Memory (MB): peak = 1309.242 ; gain = 0.000
+Synthesis Optimization Complete : Time (s): cpu = 00:00:44 ; elapsed = 00:00:48 . Memory (MB): peak = 1309.242 ; gain = 0.000
+INFO: [Project 1-571] Translating synthesized netlist
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.012 . Memory (MB): peak = 1309.242 ; gain = 0.000
+INFO: [Netlist 29-17] Analyzing 21 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-570] Preparing netlist for logic optimization
+INFO: [Opt 31-138] Pushed 1 inverter(s) to 12 load pin(s).
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.001 . Memory (MB): peak = 1309.242 ; gain = 0.000
+INFO: [Project 1-111] Unisim Transformation Summary:
+  A total of 13 instances were transformed.
+  LD => LDCE: 1 instance 
+  RAM64X1S => RAM64X1S (inverted pins: WCLK) (RAMS64E): 12 instances
+
+Synth Design complete, checksum: 6824c84c
+INFO: [Common 17-83] Releasing license: Synthesis
+54 Infos, 175 Warnings, 0 Critical Warnings and 0 Errors encountered.
+synth_design completed successfully
+synth_design: Time (s): cpu = 00:00:48 ; elapsed = 00:00:52 . Memory (MB): peak = 1309.242 ; gain = 0.000
+INFO: [Common 17-1381] The checkpoint 'C:/Users/jorgemezacabrera/Desktop/cpu_design/cpu_design.runs/synth_1/datapath.dcp' has been generated.
+INFO: [runtcl-4] Executing : report_utilization -file datapath_utilization_synth.rpt -pb datapath_utilization_synth.pb
+INFO: [Common 17-206] Exiting Vivado at Fri Apr  7 00:20:47 2023...

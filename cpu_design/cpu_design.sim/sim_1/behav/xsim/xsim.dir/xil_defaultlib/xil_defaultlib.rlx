@@ -1,0 +1,24 @@
+0.7
+2020.2
+Apr 18 2022
+16:05:34
+C:/Users/jorgemezacabrera/Desktop/cpu_design/cpu_design.sim/sim_1/behav/xsim/glbl.v,1649976174,verilog,,,,glbl,,,,,,,,
+C:/Users/jorgemezacabrera/Desktop/cpu_design/cpu_design.srcs/sim_1/new/testbench.v,1680837092,verilog,,,,testbench,,,,,,,,
+C:/Users/jorgemezacabrera/Desktop/cpu_design/cpu_design.srcs/sources_1/new/ALU.v,1670709725,verilog,,C:/Users/jorgemezacabrera/Desktop/cpu_design/cpu_design.srcs/sources_1/new/ALU_Mux.v,,ALU,,,,,,,,
+C:/Users/jorgemezacabrera/Desktop/cpu_design/cpu_design.srcs/sources_1/new/ALU_Mux.v,1668982220,verilog,,C:/Users/jorgemezacabrera/Desktop/cpu_design/cpu_design.srcs/sources_1/new/DM_MWMEM.v,,ALU_Mux,,,,,,,,
+C:/Users/jorgemezacabrera/Desktop/cpu_design/cpu_design.srcs/sources_1/new/DM_MWMEM.v,1670357238,verilog,,C:/Users/jorgemezacabrera/Desktop/cpu_design/cpu_design.srcs/sources_1/new/EXEMEM.v,,DM_MWMEM,,,,,,,,
+C:/Users/jorgemezacabrera/Desktop/cpu_design/cpu_design.srcs/sources_1/new/EXEMEM.v,1670357225,verilog,,C:/Users/jorgemezacabrera/Desktop/cpu_design/cpu_design.srcs/sources_1/new/FwdA_Mux.v,,EXEMEM,,,,,,,,
+C:/Users/jorgemezacabrera/Desktop/cpu_design/cpu_design.srcs/sources_1/new/FwdA_Mux.v,1680839169,verilog,,C:/Users/jorgemezacabrera/Desktop/cpu_design/cpu_design.srcs/sources_1/new/FwdB_Mux.v,,FwdA_Mux,,,,,,,,
+C:/Users/jorgemezacabrera/Desktop/cpu_design/cpu_design.srcs/sources_1/new/FwdB_Mux.v,1680839169,verilog,,C:/Users/jorgemezacabrera/Desktop/cpu_design/cpu_design.srcs/sources_1/new/IDEXE.v,,FwdB_Mux,,,,,,,,
+C:/Users/jorgemezacabrera/Desktop/cpu_design/cpu_design.srcs/sources_1/new/IDEXE.v,1670357142,verilog,,C:/Users/jorgemezacabrera/Desktop/cpu_design/cpu_design.srcs/sources_1/new/IFID.v,,IDEXE,,,,,,,,
+C:/Users/jorgemezacabrera/Desktop/cpu_design/cpu_design.srcs/sources_1/new/IFID.v,1670357102,verilog,,C:/Users/jorgemezacabrera/Desktop/cpu_design/cpu_design.srcs/sources_1/new/MEMWB.v,,IFID,,,,,,,,
+C:/Users/jorgemezacabrera/Desktop/cpu_design/cpu_design.srcs/sources_1/new/MEMWB.v,1670357251,verilog,,C:/Users/jorgemezacabrera/Desktop/cpu_design/cpu_design.srcs/sources_1/new/Wb_Mux.v,,MEMWB,,,,,,,,
+C:/Users/jorgemezacabrera/Desktop/cpu_design/cpu_design.srcs/sources_1/new/Wb_Mux.v,1680840893,verilog,,C:/Users/jorgemezacabrera/Desktop/cpu_design/cpu_design.srcs/sources_1/new/control_unit.v,,Wb_Mux,,,,,,,,
+C:/Users/jorgemezacabrera/Desktop/cpu_design/cpu_design.srcs/sources_1/new/control_unit.v,1680840294,verilog,,C:/Users/jorgemezacabrera/Desktop/cpu_design/cpu_design.srcs/sources_1/new/datapath.v,,control_unit,,,,,,,,
+C:/Users/jorgemezacabrera/Desktop/cpu_design/cpu_design.srcs/sources_1/new/datapath.v,1680839839,verilog,,C:/Users/jorgemezacabrera/Desktop/cpu_design/cpu_design.srcs/sources_1/new/immediate_extender.v,,datapath,,,,,,,,
+C:/Users/jorgemezacabrera/Desktop/cpu_design/cpu_design.srcs/sources_1/new/immediate_extender.v,1670357112,verilog,,C:/Users/jorgemezacabrera/Desktop/cpu_design/cpu_design.srcs/sources_1/new/instruction_memory.v,,immediate_extender,,,,,,,,
+C:/Users/jorgemezacabrera/Desktop/cpu_design/cpu_design.srcs/sources_1/new/instruction_memory.v,1670800887,verilog,,C:/Users/jorgemezacabrera/Desktop/cpu_design/cpu_design.srcs/sources_1/new/pc_adder.v,,instruction_memory,,,,,,,,
+C:/Users/jorgemezacabrera/Desktop/cpu_design/cpu_design.srcs/sources_1/new/pc_adder.v,1670357044,verilog,,C:/Users/jorgemezacabrera/Desktop/cpu_design/cpu_design.srcs/sources_1/new/program_counter.v,,pc_adder,,,,,,,,
+C:/Users/jorgemezacabrera/Desktop/cpu_design/cpu_design.srcs/sources_1/new/program_counter.v,1670357027,verilog,,C:/Users/jorgemezacabrera/Desktop/cpu_design/cpu_design.srcs/sources_1/new/register_file.v,,program_counter,,,,,,,,
+C:/Users/jorgemezacabrera/Desktop/cpu_design/cpu_design.srcs/sources_1/new/register_file.v,1680838559,verilog,,C:/Users/jorgemezacabrera/Desktop/cpu_design/cpu_design.srcs/sources_1/new/regrt_mux.v,,register_file,,,,,,,,
+C:/Users/jorgemezacabrera/Desktop/cpu_design/cpu_design.srcs/sources_1/new/regrt_mux.v,1668982220,verilog,,C:/Users/jorgemezacabrera/Desktop/cpu_design/cpu_design.srcs/sim_1/new/testbench.v,,regrt_mux,,,,,,,,
